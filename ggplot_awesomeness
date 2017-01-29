@@ -1,0 +1,13 @@
+library(ggplot2)
+data("diamonds")
+View(diamonds)
+summary(diamonds)
+ggplot(diamonds, aes(x=carat, y=price)) + geom_point()
+ggplot(diamonds, aes(x=cut, y=price)) + geom_point()
+ggplot(diamonds, aes(x=color, y=price)) + geom_point()
+ggplot(diamonds, aes(x=clarity, y=price)) + geom_point()
+ggplot(diamonds, aes(x=clarity, y=price, color=clarity)) + geom_point()
+ggplot(diamonds, aes(x=carat, y=price, color=clarity)) + geom_point()
+ggplot(diamonds, aes(x=carat, y=price, color=clarity, size=cut)) + geom_point()
+ggplot(diamonds, aes(x=carat, y=price)) + geom_point()+ geom_smooth(se=FALSE,method="lm")
+
